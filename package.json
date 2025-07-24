@@ -1,0 +1,24 @@
+{
+  "name": "rmgs-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.4",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-icons": "^4.9.0",
+    "react-router-dom": "^6.4.0"
+  },
+  "devDependencies": {
+    "vite": "^7.0.5"
+  }
+}

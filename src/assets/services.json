@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Oil Change Service",
+    "icon": "oil.png",
+    "description": "Complete oil change with top-grade oil and filter replacement."
+  },
+  {
+    "title": "Brake Overhaul",
+    "icon": "brake.png",
+    "description": "Full brake system inspection and overhaul for maximum safety."
+  },
+  {
+    "title": "Suspension Overhaul",
+    "icon": "suspension.png",
+    "description": "Comprehensive suspension check and repair for a smooth ride."
+  },
+  {
+    "title": "Clutch Overhaul",
+    "icon": "clutch.png",
+    "description": "Expert clutch inspection, repair, and replacement services."
+  },
+  {
+    "title": "Engine Overhaul",
+    "icon": "engine.png",
+    "description": "Complete engine diagnostics, repair, and overhaul solutions."
+  },
+  {
+    "title": "Gearbox Overhaul",
+    "icon": "transmission.png",
+    "description": "Professional gearbox inspection and overhaul for all vehicles."
+  },
+  {
+    "title": "Vehicle DTC Checkup",
+    "icon": "dtc.png",
+    "description": "Advanced diagnostic trouble code (DTC) scanning and solutions."
+  },
+  {
+    "title": "Electrical Checkup",
+    "icon": "electrical.png",
+    "description": "Thorough electrical system check and repair for your vehicle."
+  },
+  {
+    "title": "Denting & Painting",
+    "icon": "denting.png",
+    "description": "Quality denting and painting services for a fresh new look."
+  },
+  {
+    "title": "Roadside Assistance",
+    "icon": "roadside.png",
+    "description": "24/7 emergency roadside assistance for breakdowns and emergencies."
+  },
+  {
+    "title":"overall servicing",
+    "icon":"servicing.png",
+    "description": "Comprehensive vehicle servicing for optimal performance."
+  }
+]
