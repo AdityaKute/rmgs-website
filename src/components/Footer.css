@@ -1,6 +1,6 @@
 .footer {
-  background: #1a237e;
-  color: #fff;
+  background: #f1f747;
+  color: black;
   text-align: center;
   padding: 1.2rem 0 0.7rem 0;
   margin-top: 2rem;
@@ -8,11 +8,52 @@
 }
 
 .footer a {
-  color: #fff;
+  color: black;
   text-decoration: underline;
   margin: 0 0.3rem;
 }
 
 .footer a:hover {
   color: #ffb300;
+}
+.social-icons-footer {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-link-footer {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+  overflow: hidden;
+}
+
+.social-link-footer:hover {
+  color: #ffb300;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  object-fit: contain;
+}
+
+.footer-rmgs-text {
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 0;
+  transition: max-width 0.6s ease-in-out;
+  margin-left: 0.4rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.footer-rmgs-text.visible {
+  max-width: 100px;
 }

@@ -27,7 +27,7 @@ const Login = () => {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      background: "linear-gradient(135deg, #1a237e 70%, #3949ab 100%)"
+      background: "linear-gradient(135deg, #1a237e 70%, #1a237e 100%)"
     }}>
       <form
         onSubmit={handleSubmit}
@@ -49,7 +49,7 @@ const Login = () => {
                     alt="Proprietor"
                     className="proprietor-img"
                   />
-          <h2 style={{ color: "#1a237e", margin: 0 }}>Proprietor Login</h2>
+          <h2 style={{ color: "red", margin: 0 }}>Proprietor Login</h2>
         </div>
         <input
           name="username"
@@ -60,7 +60,7 @@ const Login = () => {
           style={{
             padding: "0.9rem",
             borderRadius: "8px",
-            border: "1px solid #bbb",
+            border: "1px solid #f1f747",
             fontSize: "1rem"
           }}
         />
@@ -74,15 +74,15 @@ const Login = () => {
           style={{
             padding: "0.9rem",
             borderRadius: "8px",
-            border: "1px solid #bbb",
+            border: "1px solid #f1f747",
             fontSize: "1rem"
           }}
         />
         <button
           type="submit"
           style={{
-            background: "#1a237e",
-            color: "#fff",
+            background: "#f1f747",
+            color: "red",
             border: "none",
             padding: "1rem",
             borderRadius: "8px",

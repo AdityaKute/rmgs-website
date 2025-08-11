@@ -37,9 +37,9 @@ const Home = () => {
             style={{ cursor: "pointer" }}
           />
         </Link>
-        <h2>{t.aboutProprietor}</h2>
+        <h4>{t.aboutProprietor}</h4>
         <p>
-          <b>Mr. Sachin Kute</b> {t.proprietorDesc}
+          <h3>{t.proprietorDesc}</h3>
           <br />
           <span>
             "{t.proprietorQuote}"

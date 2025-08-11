@@ -1,5 +1,6 @@
 import React from 'react';
 import services from '../assets/services.json';
+import '../assets/translations.js'
 import oil from '../assets/oil.png';
 import brake from '../assets/brake.png';
 import suspension from '../assets/suspension.png';
@@ -11,6 +12,8 @@ import electrical from '../assets/electrical.png';
 import denting from '../assets/denting.png';
 import roadside from '../assets/roadside.png';
 import servicing from '../assets/servicing.png';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../assets/translations';
 
 const iconMap = {
   "oil.png": oil,
@@ -48,7 +51,7 @@ const lastTdStyle = {
 
 // Assign random prices for each service (you can adjust as needed)
 const prices = [
-  500, 1200, 1500, 1100, 3500, 2500, 600, 800, 2000, 1000, 1800, 2200
+  "500-800", "1500", "1200", "3000-4500", "depends on condition", "3500-5500", "500", "depends on condition", "2500-3500", "500-2500", "1800-2500"
 ];
 
 const iconStyle = {
@@ -59,34 +62,48 @@ const iconStyle = {
   margin: "0 auto"
 };
 
-const Pricing = () => (
-  <div className="pricing">
-    <h2 style={{ textAlign: "center" }}>Service Pricing</h2>
-    <table style={tableStyle}>
-      <thead>
-        <tr>
-          <th style={thtdStyle}>Image</th>
-          <th style={thtdStyle}>Service</th>
-          <th style={lastTdStyle}>Price (₹)</th>
-        </tr>
-      </thead>
-      <tbody>
-        {services.map((service, idx) => (
-          <tr key={service.title}>
-            <td style={thtdStyle}>
-              <img
-                src={iconMap[service.icon]}
-                alt={service.title}
-                style={iconStyle}
-              />
-            </td>
-            <td style={thtdStyle}>{service.title}</td>
-            <td style={lastTdStyle}>₹{prices[idx] || 1000}</td>
+const Pricing = () => {
+  const { lang } = useLanguage();
+  const currentTranslations = translations[lang];
+  return (
+    <div className="pricing">
+      <h2 style={{ textAlign: "center" }}>{currentTranslations.servicePricing}</h2>
+      <p style={{ 
+        textAlign: "center", 
+        fontStyle: "italic", 
+        color: "#d32f2f", 
+        fontWeight: "bold", 
+        margin: "0.5rem 0 1rem 0",
+        fontSize: "1.1rem"
+      }}>
+        {currentTranslations.priceDisclaimer}
+      </p>
+      <table style={tableStyle}>
+        <thead>
+          <tr>
+            <th style={thtdStyle}>{currentTranslations.Image}</th>
+            <th style={thtdStyle}>{currentTranslations.Service}</th>
+            <th style={lastTdStyle}>{currentTranslations.Price} (₹)</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-);
+        </thead>
+        <tbody>
+          {services.map((service, idx) => (
+            <tr key={service.titleKey}>
+              <td style={thtdStyle}>
+                <img
+                  src={iconMap[service.icon]}
+                  alt={currentTranslations[service.titleKey]}
+                  style={iconStyle}
+                />
+              </td>
+              <td style={thtdStyle}>{currentTranslations[service.titleKey]}</td>
+              <td style={lastTdStyle}>₹{prices[idx] || 1000}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
 
 export default Pricing;

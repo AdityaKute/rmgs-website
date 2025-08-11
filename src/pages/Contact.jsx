@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-
+import { translations } from '../assets/translations';
+import { useLanguage } from '../context/LanguageContext';
 const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const { lang } = useLanguage();
+      const currentTranslations = translations[lang];
 
   const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value });
   const handleSubmit = e => {
@@ -17,20 +20,20 @@ const Contact = () => {
 
   return (
     <div className="contact">
-      <h2><u>Contact Us</u></h2>
+      <h2><u>{currentTranslations.contactUs}</u></h2>
       <form onSubmit={handleSubmit}>
-        <input name="name" placeholder="Name" onChange={handleChange} required />
-        <input name="email" type="email" placeholder="Email" onChange={handleChange} required />
-        <input name="message" placeholder="Message" onChange={handleChange} required />
-        <button type="submit">Send</button>
+        <input name="name" placeholder={currentTranslations.name} onChange={handleChange} required />
+        <input name="email" type="email" placeholder={currentTranslations.email} onChange={handleChange} required />
+        <input name="message" placeholder={currentTranslations.message} onChange={handleChange} required />
+        <button type="submit">{currentTranslations.send}</button>
       </form>
 
       <button
         type="button"
         className="whatsapp-btn"
-        onClick={() => window.open("https://wa.me/919987429427", "_blank")}
+        onClick={() => window.open("https://wa.me/917507491737", "_blank")}
       >
-        Chat on WhatsApp
+        {currentTranslations.whatsapp}
       </button>
     </div>
   );
