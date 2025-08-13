@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
+import Logo from "../assets/gallery-rmgslogo.png";
 import "./Header.css";
 
 const Divider = () => <span style={{ color: "green" }}>|</span>;
@@ -55,11 +56,7 @@ const t = translations[lang];
 
   return (
     <header className="header">
-      <img
-        src="/src/assets/gallery-rmgslogo.png"
-        alt="RMGS Logo"
-        className="header-logo"
-      />
+      <img src={Logo} alt="RMGS Logo" className="header-logo" />
       <div className={`logo ${isScrolled ? "scrolled" : ""}`}>
         <span className="letter">R</span>
         <span className="full-text">oyal </span><br></br>

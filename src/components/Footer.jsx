@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Footer.css";
+import whatsappIcon from "../assets/whatsapp.png";
+import facebookIcon from "../assets/facebook.png";
+import instagramIcon from "../assets/instagram.png";
 
 const Footer = () => {
   const footerRef = useRef(null);
@@ -8,17 +11,17 @@ const Footer = () => {
   const socialLinks = [
     {
       name: "WhatsApp",
-      src: "src/assets/whatsapp.png",
-      link: "https://wa.me/917507491737",
+      src: whatsappIcon,
+      link: "https://wa.me/917507491737"
     },
     {
       name: "Facebook",
-      src: "src/assets/facebook.png",
+      src: facebookIcon,
       link: "https://facebook.com/rmgs", // Replace with actual
     },
     {
       name: "Instagram",
-      src: "src/assets/instagram.png",
+      src: instagramIcon,
       link: "https://instagram.com/rmgs", // Replace with actual
     },
   ];
