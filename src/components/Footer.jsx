@@ -3,28 +3,12 @@ import "./Footer.css";
 import whatsappIcon from "../assets/whatsapp.png";
 import facebookIcon from "../assets/facebook.png";
 import instagramIcon from "../assets/instagram.png";
+import PhoneIcon from "../assets/phoneicon.png";
+import EmailIcon from "../assets/emailicon.png";
 
 const Footer = () => {
   const footerRef = useRef(null);
   const [showText, setShowText] = useState(false);
-
-  const socialLinks = [
-    {
-      name: "WhatsApp",
-      src: whatsappIcon,
-      link: "https://wa.me/917507491737"
-    },
-    {
-      name: "Facebook",
-      src: facebookIcon,
-      link: "https://facebook.com/rmgs", // Replace with actual
-    },
-    {
-      name: "Instagram",
-      src: instagramIcon,
-      link: "https://instagram.com/rmgs", // Replace with actual
-    },
-  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -43,40 +27,42 @@ const Footer = () => {
 
   return (
     <footer className="footer" ref={footerRef}>
-      <div>
-        <b>RMGS - Royal Motors Garage Services</b> | Narayangaon, Pune, India |
-        <br />
-        Phone:{" "}
-        <a href="tel:+919987429427">+91 75074 91737</a> | Email:{" "}
-        <a href="mailto:info@rmgs-pune.com">rmgs21@gmail.com</a>
-        <br />
-        <div className="social-icons-footer">
-          {socialLinks.map((item, index) => (
-            <a
-              key={index}
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link-footer"
-            >
-              <img
-                src={item.src}
-                alt={item.name}
-                className="social-icon"
-              />
-              <span className={`footer-rmgs-text ${showText ? "visible" : ""}`}>
-                RMGS
-              </span>
-            </a>
-          ))}
-        </div>
-        <br />
-        <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
-        <b style={{ color: "black", fontSize: "1.1rem" }}>*Terms & Conditions apply</b>
-      </div>
-        &copy; {new Date().getFullYear()} RMGS. All rights reserved.
-      </div>
-    </footer>
+  <div className="footer-left">
+    <p><b>RMGS - Royal Motors Garage Services</b></p>
+    <p>Narayangaon, Pune, India</p>
+    <p> 
+      <img src={PhoneIcon} alt="Phone" className="footer-icon" /><b>Phone:</b>
+      <a href="tel:+919987429427">+91 75074 91737</a></p>
+    <p> 
+      <img src={EmailIcon} alt="Email" className="footer-icon" /><b>Email:</b>
+      <a href="mailto:info@rmgs-pune.com">rmgs21@gmail.com</a></p>
+
+    <p> 
+      <img src={whatsappIcon} alt="WhatsApp" className="footer-icon" /><b>WhatsApp:</b>
+      <a href="https://wa.me/917507491737" target="_blank" rel="noopener noreferrer">
+        Chat Now
+      </a>
+    </p>
+    <p>
+      <img src={facebookIcon} alt="Facebook" className="footer-icon" /><b>Facebook:</b>
+      <a href="https://facebook.com/rmgs" target="_blank" rel="noopener noreferrer">
+         Visit Page
+      </a>
+    </p>
+    <p>
+      <img src={instagramIcon} alt="Instagram" className="footer-icon" /><b>Instagram:</b>
+      <a href="https://instagram.com/rmgs" target="_blank" rel="noopener noreferrer">
+        Follow Us
+      </a>
+    </p>
+
+    <p className="tnc"><b>*Terms & Conditions apply</b></p>
+  </div>
+
+  <div className="footer-center">
+    <p>&copy; {new Date().getFullYear()} RMGS. All rights reserved.</p>
+  </div>
+</footer>
   );
 };
 
