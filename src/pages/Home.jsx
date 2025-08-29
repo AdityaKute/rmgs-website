@@ -17,14 +17,14 @@ const Home = () => {
           <br />
           <b>{t.call}:{" "}
 
-            <a href="tel:+919987429427" style={{ color: "blue", textDecoration: "underline" }}>
+            <Link to="tel:+919987429427" style={{ color: "blue", textDecoration: "underline" }}>
               +91 99874 29427
-            </a>
+            </Link>
           </b>
         </p>
-        <a href="tel:+919987429427" className="cta-btn red-rounded-btn">
+        <Link to="/contact" className="cta-btn red-rounded-btn">
           {t.requestHelp}
-        </a>
+        </Link>
       </section>
 
       {/* Owner Info Section */}
@@ -46,9 +46,9 @@ const Home = () => {
           </span>
         </p>
         <div className="proprietor-btn">
-          <a href="/contact" className="cta-btn blue-rounded-btn">
+          <Link to="/contact" className="cta-btn blue-rounded-btn">
             {t.contactProprietor}
-          </a>
+          </Link>
         </div>
       </section>
 
