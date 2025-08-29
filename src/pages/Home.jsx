@@ -22,7 +22,7 @@ const Home = () => {
             </a>
           </b>
         </p>
-        <a href="/contact" className="cta-btn">
+        <a href="tel:+919987429427" className="cta-btn red-rounded-btn">
           {t.requestHelp}
         </a>
       </section>
@@ -46,7 +46,7 @@ const Home = () => {
           </span>
         </p>
         <div className="proprietor-btn">
-          <a href="/contact" className="cta-btn">
+          <a href="/contact" className="cta-btn blue-rounded-btn">
             {t.contactProprietor}
           </a>
         </div>

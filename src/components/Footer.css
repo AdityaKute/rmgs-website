@@ -38,7 +38,7 @@
 
 /* Links */
 .footer a {
-  color: black;
+  color: red;
   text-decoration: underline;
   margin: 0 0.3rem;
 }
@@ -52,4 +52,21 @@
   margin-top: 0.5rem;
   font-size: 0.9rem;
   color: #333;
+}
+
+.link-btn {
+  background-color: white;
+  color: red;
+  padding: 6px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 8px; /* Optional: spacing between text and button */
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.link-btn:hover {
+  background-color: #f1f747;
+  color: red;
 }

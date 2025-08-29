@@ -5,3 +5,36 @@ body {
   padding: 0;
   background-color: #f4f4f4;
 }
+
+.red-rounded-btn {
+  background-color: #f1f747;
+  color: red;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.red-rounded-btn:hover {
+  background-color: red;
+  color: #f1f747;
+}
+
+.blue-rounded-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.blue-rounded-btn:hover {
+  background-color: darkblue;
+}

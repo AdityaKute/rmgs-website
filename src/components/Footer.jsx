@@ -32,33 +32,32 @@ const Footer = () => {
     <p>Narayangaon, Pune, India</p>
     <p> 
       <img src={PhoneIcon} alt="Phone" className="footer-icon" /><b>Phone:</b>
-      <a href="tel:+919987429427">+91 75074 91737</a></p>
+      <a href="tel:+919987429427" className="link-btn">+91 75074 91737</a>
+    </p>
     <p> 
       <img src={EmailIcon} alt="Email" className="footer-icon" /><b>Email:</b>
-      <a href="mailto:info@rmgs-pune.com">rmgs21@gmail.com</a></p>
-
+      <a href="mailto:info@rmgs-pune.com" className="link-btn">rmgs21@gmail.com</a>
+    </p>
     <p> 
       <img src={whatsappIcon} alt="WhatsApp" className="footer-icon" /><b>WhatsApp:</b>
-      <a href="https://wa.me/917507491737" target="_blank" rel="noopener noreferrer">
+      <a href="https://wa.me/917507491737" target="_blank" rel="noopener noreferrer" className="link-btn">
         Chat Now
       </a>
     </p>
     <p>
       <img src={facebookIcon} alt="Facebook" className="footer-icon" /><b>Facebook:</b>
-      <a href="https://facebook.com/rmgs" target="_blank" rel="noopener noreferrer">
-         Visit Page
+      <a href="https://facebook.com/rmgs" target="_blank" rel="noopener noreferrer" className="link-btn">
+        Visit Page
       </a>
     </p>
     <p>
-      <img src={instagramIcon} alt="Instagram" className="footer-icon" /><b>Instagram:</b>
-      <a href="https://instagram.com/rmgs" target="_blank" rel="noopener noreferrer">
+    <img src={instagramIcon} alt="Instagram" className="footer-icon" /><b>Instagram:</b>
+      <a href="https://instagram.com/rmgs" target="_blank" rel="noopener noreferrer" className="link-btn">
         Follow Us
       </a>
     </p>
-
     <p className="tnc"><b>*Terms & Conditions apply</b></p>
   </div>
-
   <div className="footer-center">
     <p>&copy; {new Date().getFullYear()} RMGS. All rights reserved.</p>
   </div>
