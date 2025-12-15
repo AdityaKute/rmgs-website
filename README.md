@@ -1,7 +1,7 @@
 # RMGS - Royal Motors Garage Services Website
 
 ## Overview
-A professional roadside garage website made with React.js. Fully responsive with local branding.
+A professional garage website made with React.js. Fully responsive with branding.
 
 ## Run Locally
 ```bash
@@ -15,4 +15,4 @@ npm run build
 ```
 
 ## Deploy
-Use Netlify, Vercel, or GitHub Pages
+Used Netlify
